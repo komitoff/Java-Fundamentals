@@ -42,12 +42,11 @@ public class Main {
 //            }
 //        });
 
-//        if (!persons.isEmpty() || persons.size() == n) {
-//            System.out.println("--------------------");
-//        }
+        if (!persons.isEmpty() || persons.size() == n) {
+            System.out.println("--------------------");
+        }
 
         int bonus = Integer.parseInt(reader.readLine());
-        System.out.println(persons.size());
         for (Person person : persons) {
             person.increaseSalary(bonus);
             System.out.println(person.toString());

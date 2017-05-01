@@ -34,7 +34,7 @@ public class Person {
 
     private void setAge(int age) {
         if (age <= 0) {
-            throw new IllegalArgumentException("Age can not be zero or negative integer");
+            throw new IllegalArgumentException("Age cannot be zero or negative integer");
         }
         this.age = age;
     }
@@ -45,21 +45,16 @@ public class Person {
 
     private void setSalary(double salary) {
         if (salary < 460.0) {
-            throw new IllegalArgumentException("Salary can't be less than 460.0");
+            throw new IllegalArgumentException("Salary cannot be less than 460 leva");
         }
         this.salary = salary;
     }
 
     public Person(String firstName, String lastName, int age, double salary) {
-        try {
-            this.setFirstName(firstName);
-            this.setLastName(lastName);
-            this.setAge(age);
-            this.setSalary(salary);
-        }
-        catch (Exception e) {
-            e.getMessage();
-        }
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setAge(age);
+        this.setSalary(salary);
     }
 
     public void increaseSalary(int percentage) {
