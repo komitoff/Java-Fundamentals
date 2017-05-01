@@ -1,13 +1,11 @@
 package main;
 
 import model.Person;
-import sun.rmi.server.InactiveGroupException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -19,11 +17,18 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             String [] input = reader.readLine().split("\\s+");
-            persons.add(new Person(input[0],
-                    input[1],
-                    Integer.parseInt(input[2]),
-                    Double.parseDouble(input[3])
-            ));
+            try {
+                Person person = new Person(
+                        input[0],
+                        input[1],
+                        Integer.parseInt(input[2]),
+                        Double.parseDouble(input[3])
+                );
+                persons.add(person);
+            }
+            catch (IllegalArgumentException iae) {
+                System.out.println(iae.getMessage());
+            }
         }
 
 //        Collections.sort(persons, (firstPerson, secondPerson) -> {
@@ -37,8 +42,12 @@ public class Main {
 //            }
 //        });
 
-        int bonus = Integer.parseInt(reader.readLine());
+//        if (!persons.isEmpty() || persons.size() == n) {
+//            System.out.println("--------------------");
+//        }
 
+        int bonus = Integer.parseInt(reader.readLine());
+        System.out.println(persons.size());
         for (Person person : persons) {
             person.increaseSalary(bonus);
             System.out.println(person.toString());
