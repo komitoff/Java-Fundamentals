@@ -6,6 +6,13 @@ public class Person {
     private int age;
     private double salary;
 
+    public Person(String firstName, String lastName, int age, double salary) {
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setAge(age);
+        this.setSalary(salary);
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -48,13 +55,6 @@ public class Person {
             throw new IllegalArgumentException("Salary cannot be less than 460 leva");
         }
         this.salary = salary;
-    }
-
-    public Person(String firstName, String lastName, int age, double salary) {
-        this.setFirstName(firstName);
-        this.setLastName(lastName);
-        this.setAge(age);
-        this.setSalary(salary);
     }
 
     public void increaseSalary(int percentage) {

@@ -1,6 +1,7 @@
 package main;
 
 import model.Person;
+import model.Team;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,15 +43,22 @@ public class Main {
 //            }
 //        });
 
-        if (!persons.isEmpty() || persons.size() == n) {
-            System.out.println("--------------------");
-        }
+//        if (!persons.isEmpty() || persons.size() == n) {
+//            System.out.println("--------------------");
+//        }
+//
+//        int bonus = Integer.parseInt(reader.readLine());
+//        for (Person person : persons) {
+//            person.increaseSalary(bonus);
+//            System.out.println(person.toString());
+//        }
 
-        int bonus = Integer.parseInt(reader.readLine());
+        Team team = new Team("Minior");
         for (Person person : persons) {
-            person.increaseSalary(bonus);
-            System.out.println(person.toString());
+            team.addPlayer(person);
         }
 
+        System.out.println("First team have " + team.getFirstTeam().size() + " players");
+        System.out.println("Reserve team have " + team.getReserveTeam().size() + " players");
     }
 }
