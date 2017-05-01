@@ -1,6 +1,7 @@
 package main;
 
 import model.Person;
+import sun.rmi.server.InactiveGroupException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,21 +19,28 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             String [] input = reader.readLine().split("\\s+");
-            persons.add(new Person(input[0], input[1], Integer.parseInt(input[2])));
+            persons.add(new Person(input[0],
+                    input[1],
+                    Integer.parseInt(input[2]),
+                    Double.parseDouble(input[3])
+            ));
         }
 
-        Collections.sort(persons, (firstPerson, secondPerson) -> {
-            int sComp = firstPerson.getFirstName().compareTo(secondPerson.getFirstName());
+//        Collections.sort(persons, (firstPerson, secondPerson) -> {
+//            int sComp = firstPerson.getFirstName().compareTo(secondPerson.getFirstName());
+//
+//            if (sComp != 0) {
+//                return sComp;
+//            }
+//            else {
+//                return Integer.compare(firstPerson.getAge(), secondPerson.getAge());
+//            }
+//        });
 
-            if (sComp != 0) {
-                return sComp;
-            }
-            else {
-                return Integer.compare(firstPerson.getAge(), secondPerson.getAge());
-            }
-        });
+        int bonus = Integer.parseInt(reader.readLine());
 
         for (Person person : persons) {
+            person.increaseSalary(bonus);
             System.out.println(person.toString());
         }
 
