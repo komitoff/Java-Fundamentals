@@ -21,9 +21,16 @@ public class Main {
         double length = Double.parseDouble(reader.readLine());
         double width = Double.parseDouble(reader.readLine());
         double height = Double.parseDouble(reader.readLine());
-        Box box = new Box(length, width, height);
-        System.out.printf("Surface Area - %.2f\n", box.calcSurfaceArea());
-        System.out.printf("Lateral Surface Area - %.2f\n", box.calcLateralSurfaceArea());
-        System.out.printf("Volume - %.2f\n", box.calcVolume());
+
+        try {
+            Box box = new Box(length, width, height);
+            System.out.printf("Surface Area - %.2f\n", box.calcSurfaceArea());
+            System.out.printf("Lateral Surface Area - %.2f\n", box.calcLateralSurfaceArea());
+            System.out.printf("Volume - %.2f\n", box.calcVolume());
+        }
+        catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
+
     }
 }
