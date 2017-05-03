@@ -36,7 +36,6 @@ public class Main {
             String[] tokens = command.split(" ");
             String personsName = tokens[0];
             String productName = tokens[1];
-            
         }
 
     }

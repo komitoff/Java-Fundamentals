@@ -36,4 +36,24 @@ public class Person {
         }
         this.cash = cash;
     }
+
+    public void addProduct(Product product) {
+        if (product.getCost() > this.getCash()) {
+            throw new IllegalArgumentException(this.getName() + " can't afford " + product.getName());
+        }
+        this.bagOfProducts.add(product);
+    }
+
+    public void printShoppingList() {
+        if (this.bagOfProducts.size() == 0) {
+            System.out.println(this.getName() + " - Nothing bought");
+        }
+        else {
+            System.out.println(this.getName() + );
+        }
+    }
+//    @Override
+//    public String toString () {
+//
+//    }
 }
