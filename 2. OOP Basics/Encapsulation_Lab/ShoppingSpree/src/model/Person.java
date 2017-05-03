@@ -21,7 +21,7 @@ public class Person {
 
     private void setName(String name) {
         if (name.length() < 1) {
-            throw new IllegalArgumentException("Name must be at least 1 symbol long");
+            throw new IllegalArgumentException("Name cannot be empty string");
         }
         this.name = name;
     }
@@ -32,7 +32,7 @@ public class Person {
 
     private void setCash(double cash) {
         if (cash < 0 ) {
-            throw new IllegalArgumentException("Cash cannot be negative");
+            throw new IllegalArgumentException("Money cannot be negative number");
         }
         this.cash = cash;
     }
