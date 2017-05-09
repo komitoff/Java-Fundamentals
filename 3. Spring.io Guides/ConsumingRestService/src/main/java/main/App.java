@@ -1,5 +1,6 @@
 package main;
 
+import model.Participant;
 import model.Quote;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -27,9 +28,9 @@ public class App {
     @Bean
     public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
         return args -> {
-                Quote quote = restTemplate.getForObject(
-                "https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-                log.info(quote.toString());
+                Participant participant = restTemplate.getForObject(
+                "http://api.football-data.org/v1/competitions/398/teams", Participant.class);
+                log.info(participant.toString());
         };
     }
 }
