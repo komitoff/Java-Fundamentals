@@ -29,7 +29,7 @@ public class App {
     public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
         return args -> {
                 Participant participant = restTemplate.getForObject(
-                "http://api.football-data.org/v1/competitions/398/teams", Participant.class);
+                "http://api.football-data.org/v1/competitions/427/teams", Participant.class);
                 log.info(participant.toString());
         };
     }

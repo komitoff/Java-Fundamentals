@@ -23,6 +23,8 @@ public class Participant {
     @Override
     public String toString() {
         StringBuffer output = new StringBuffer();
+        output.append("total teams participating : " + this.getCount());
+        output.append("\n");
         for (Team team : this.teams) {
             output.append(team);
             output.append("\n");

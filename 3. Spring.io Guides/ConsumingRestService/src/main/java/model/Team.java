@@ -1,7 +1,7 @@
 package model;
 
 public class Team {
-    private Long id;
+    private long id;
     private String name;
     private String shortName;
     private String squadMarketValue;
@@ -9,7 +9,7 @@ public class Team {
 
     public Team () { }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
