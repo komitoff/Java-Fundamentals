@@ -1,5 +1,9 @@
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -18,6 +22,12 @@ public class Main {
                 .collect(Collectors.toList());
         squaredNumbers.forEach(System.out::println);
 
-        
+        LocalTime currentTime = LocalTime.now();
+        System.out.println(currentTime.getHour());
+        System.out.println(currentTime.getMinute());
+        System.out.println(currentTime.getSecond());
+
+        ZoneId zoneId = ZoneId.systemDefault();
+        System.out.println(zoneId.getRules());
     }
 }
