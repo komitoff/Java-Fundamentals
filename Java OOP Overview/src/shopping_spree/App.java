@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Person> people = new ArrayList<>();
@@ -39,7 +39,7 @@ public class Main {
             if (currentPerson.getMoney() >= currentProduct.getCost()) {
                 System.out.printf("%s bought %s", currentPerson.getName(), currentProduct.getName());
                 currentPerson.setMoney(currentPerson.getMoney() - currentProduct.getCost());
-                people.get(personIndex(personName, people)).setMoney(currentPerson.getMoney() - currentProduct.getCost());
+                people.get(personIndex(personName, people)).setMoney(currentPerson.getMoney());
                 people.get(personIndex(personName, people)).addProduct(currentProduct);
                 System.out.println();
             }
@@ -52,8 +52,13 @@ public class Main {
 
         for (Person person : people) {
             System.out.print(person.getName() + " - ");
-            for (Product product : person.getBagOfProducts()) {
-                System.out.print(product.getName());
+            if(person.getBagOfProducts().size() == 0) {
+                System.out.println("Nothing bought");
+            }
+            else {
+                for (Product product : person.getBagOfProducts()) {
+                    System.out.print(product.getName());
+                }
             }
             System.out.println();
         }

@@ -2,7 +2,7 @@ package last_digit_name;
 
 import java.util.Scanner;
 
-public class Main {
+public class LastDigit {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] digitNames = new String[] {

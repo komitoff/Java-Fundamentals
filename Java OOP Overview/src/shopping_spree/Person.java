@@ -11,6 +11,9 @@ public class Person {
     private List<Product> bagOfProducts;
 
     private void setName(String name) {
+        if (name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be empty");
+        }
         this.name = name;
     }
 
@@ -19,6 +22,9 @@ public class Person {
     }
 
     public void setMoney(double money) {
+        if (money < 0) {
+            throw new IllegalArgumentException("Money cannot be negative");
+        }
         this.money = money;
     }
 
@@ -27,8 +33,13 @@ public class Person {
     }
 
     public Person(String name, double money) {
-        this.setName(name);
-        this.setMoney(money);
+        try {
+            this.setName(name);
+            this.setMoney(money);
+        }
+        catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
         this.bagOfProducts = new ArrayList<>();
     }
 
