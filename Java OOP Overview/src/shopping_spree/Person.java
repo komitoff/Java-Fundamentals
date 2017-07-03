@@ -18,7 +18,7 @@ public class Person {
         return this.name;
     }
 
-    private void setMoney(double money) {
+    public void setMoney(double money) {
         this.money = money;
     }
 
@@ -30,6 +30,10 @@ public class Person {
         this.setName(name);
         this.setMoney(money);
         this.bagOfProducts = new ArrayList<>();
+    }
+
+    public List<Product> getBagOfProducts() {
+        return this.bagOfProducts;
     }
 
     public void addProduct(Product product) {
