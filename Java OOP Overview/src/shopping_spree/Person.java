@@ -33,13 +33,8 @@ public class Person {
     }
 
     public Person(String name, double money) {
-        try {
-            this.setName(name);
-            this.setMoney(money);
-        }
-        catch (IllegalArgumentException iae) {
-            System.out.println(iae.getMessage());
-        }
+        this.setName(name);
+        this.setMoney(money);
         this.bagOfProducts = new ArrayList<>();
     }
 

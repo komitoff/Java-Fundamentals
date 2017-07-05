@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Person> people = new ArrayList<>();
@@ -17,7 +17,12 @@ public class App {
             String[] peopleAndMoney = peopleTokens[i].split("=");
             String personName = peopleAndMoney[0];
             double money = Double.parseDouble(peopleAndMoney[1]);
-            people.add(new Person(personName, money));
+            try {
+                people.add(new Person(personName, money));
+            } catch (IllegalArgumentException iae) {
+                System.out.println(iae.getMessage());
+                return;
+            }
         }
 
         String[] productTokens = scanner.nextLine().split(";");
@@ -30,7 +35,7 @@ public class App {
 
         String command = scanner.nextLine();
 
-        while (!command.toUpperCase().equals("END")) {
+        while (!command.toUpperCase().equals("END") || !command.equals("")) {
             String[] tokens = command.split("\\s+");
             String personName = tokens[0];
             String productName = tokens[1];
@@ -56,11 +61,14 @@ public class App {
                 System.out.println("Nothing bought");
             }
             else {
+                StringBuffer sb = new StringBuffer();
                 for (Product product : person.getBagOfProducts()) {
-                    System.out.print(product.getName());
+                    sb.append(", ");
+                    sb.append(product.getName());
                 }
+                sb.replace(0,2, "");
+                System.out.println(sb);
             }
-            System.out.println();
         }
     }
 
