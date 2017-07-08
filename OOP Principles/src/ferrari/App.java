@@ -3,7 +3,7 @@ package ferrari;
 import java.lang.instrument.IllegalClassFormatException;
 import java.util.Scanner;
 
-public class Main {
+public class App {
     public static void main(String[] args) throws IllegalClassFormatException {
 
         String ferrariName = Ferrari.class.getSimpleName();
