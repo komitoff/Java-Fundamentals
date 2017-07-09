@@ -2,7 +2,7 @@ package telephony;
 
 import java.util.Scanner;
 
-public class Main {
+public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] numbers = scanner.nextLine().split("\\s+");
