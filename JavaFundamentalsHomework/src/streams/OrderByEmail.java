@@ -11,7 +11,6 @@ public class OrderByEmail {
 		
 		String input = scanner.nextLine();
 		String emial = "tobo@gmail.com";
-		System.out.println(emial.contains("@gmail"));
 		
 		while (!input.toLowerCase().equals("end")) {
 			String[] tokens = input.split("\\s+");

@@ -1,0 +1,13 @@
+package lecture;
+
+import java.util.Scanner;
+
+public class App {
+	public static void main(String [] args) {
+		Scanner scanner = new Scanner(System.in);
+		Double a = scanner.nextDouble();
+		Double b = scanner.nextDouble();
+		System.out.println(String.format("%d", a*b));
+		scanner.close();
+	}
+}
