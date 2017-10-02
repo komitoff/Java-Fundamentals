@@ -10,16 +10,9 @@ import java.util.regex.Pattern;
 public class ParseTags {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        StringBuilder inputData = new StringBuilder();
 
-        String line = scanner.next();
-        while (!line.isEmpty()) {
-            inputData.append(line);
-            inputData.append(" ");
-            line = scanner.nextLine();
-        }
+        String input = scanner.nextLine();
 
-        String input = inputData.toString();
         Pattern pattern = Pattern.compile("<upcase>(.*?)<\\/upcase>");
         Matcher matcher = pattern.matcher(input);
         while (matcher.find()) {
