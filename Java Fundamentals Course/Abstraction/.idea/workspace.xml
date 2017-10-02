@@ -18,11 +18,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MaximalSum.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MaximalSum.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exercise/MaximalSum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="231">
+              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatrixOfPalindromes.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/exercise/MatrixOfPalindromes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,6 +99,7 @@
         <option value="$PROJECT_DIR$/src/exercise/DiagonalDifference.java" />
         <option value="$PROJECT_DIR$/src/exercise/EqualSqares.java" />
         <option value="$PROJECT_DIR$/src/exercise/MaximalSum.java" />
+        <option value="$PROJECT_DIR$/src/exercise/MatrixOfPalindromes.java" />
       </list>
     </option>
   </component>
@@ -178,27 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MaximalSum">
-    <configuration default="false" name="Triangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="lab.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="lab.Triangle" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Abstraction" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.MatrixOfPalindromes">
     <configuration default="false" name="FillMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -267,6 +260,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="exercise.MaximalSum" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Abstraction" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MatrixOfPalindromes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="exercise.MatrixOfPalindromes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -484,19 +497,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Triangle" />
-      <item index="1" class="java.lang.String" itemvalue="Application.FillMatrix" />
-      <item index="2" class="java.lang.String" itemvalue="Application.DiagonalDifference" />
-      <item index="3" class="java.lang.String" itemvalue="Application.EqualSqares" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MaximalSum" />
+      <item index="0" class="java.lang.String" itemvalue="Application.FillMatrix" />
+      <item index="1" class="java.lang.String" itemvalue="Application.DiagonalDifference" />
+      <item index="2" class="java.lang.String" itemvalue="Application.EqualSqares" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MaximalSum" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MatrixOfPalindromes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MaximalSum" />
-        <item index="1" class="java.lang.String" itemvalue="Application.EqualSqares" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DiagonalDifference" />
-        <item index="3" class="java.lang.String" itemvalue="Application.FillMatrix" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Triangle" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MatrixOfPalindromes" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MaximalSum" />
+        <item index="2" class="java.lang.String" itemvalue="Application.EqualSqares" />
+        <item index="3" class="java.lang.String" itemvalue="Application.DiagonalDifference" />
+        <item index="4" class="java.lang.String" itemvalue="Application.FillMatrix" />
       </list>
     </recent_temporary>
   </component>
@@ -515,7 +528,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -638,8 +650,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exercise/MaximalSum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="231">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercise/MatrixOfPalindromes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
