@@ -1,31 +1,46 @@
 package ex;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Scanner;
 
 public class BalancedParentheses {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        char[] line = in.nextLine().toCharArray();
+        Deque<Character> stack = new ArrayDeque<>();
+        boolean b = addPopBrackets(stack, line);
+        printYesNo(b);
+    }
 
-        int opening = 0;
-        int closing = 0;
+    private static void printYesNo(boolean b) {
+        if (b) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
 
-        String line = reader.readLine();
+    private static boolean addPopBrackets(Deque<Character> stack, char[] line) {
+        for (char c : line) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } else if (c == ')' || c == '}' || c == ']') {
+                if (!stack.isEmpty()) {
+                    Character pop = stack.pop();
+                    if (c == ')' && pop != '(') {
+                        return false;
+                    } else if (c == '}' && pop != '{') {
+                        return false;
+                    } else if (c == ']' && pop != '[') {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
 
-        for (int i = 0; i < line.length(); i++) {
-            if (line.charAt(i) == '(' ||
-                    line.charAt(i) == '{' ||
-                    line.charAt(i) == '[') {
-                opening ++;
-            }
-            else if (line.charAt(i) == ')' ||
-                    line.charAt(i) == '}' ||
-                    line.charAt(i) == ']') {
-                closing ++;
             }
         }
-
-        System.out.println(opening == closing);
+        return true;
     }
 }
